@@ -63,7 +63,14 @@ $ kerl active              # show active version (installation)
 
 ## Installing Elixir
 
-TODO
+Kiex follows the same approach as Kerl. You check the latest releases, build
+and install one in one go.
+
+```shell
+$ kiex list releases       # get the list od Elixir releases to choose from
+$ kiex install 1.11.4      # install release "1.11.4"
+$ kiex default 1.11.4      # make this release default
+```
 
 ## After installation
 

@@ -42,7 +42,7 @@ environment, verify Erlang's version and deactivate the environment when you are
 done. 
 
 ```shell
-$ source ~/.kerl/installations/23.3/activate
+$ source ~/.kerl/installations/24.0/activate
 $ kerl active
 The current active installation is:
 /usr/home/codcod/.kerl/installations/24.0

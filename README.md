@@ -1,6 +1,6 @@
 # Elixir development with FreeBSD
 
-Article reviewed in Apr 2021.
+Article reviewed in May 2021.
 
 To ensure you work with the latest version of your beloved tools use
 [Kerl](https://github.com/kerl/kerl "Github for Kerl") and
@@ -33,8 +33,8 @@ it and install it.
 
 ```shell
 $ kerl update releases     # get the list of Erlang releases to choose from
-$ kerl build 23.3 23.3     # build relase "23.3" and name it "23.3"
-$ kerl install 23.3 ~/.kerl/installations/23.3  # install built release
+$ kerl build 24.0 24.0     # build relase "24.0" and give it name "24.0"
+$ kerl install 24.0 ~/.kerl/installations/24.0  # install built release
 ```
 
 To make sure that the installation was successful try to activate the new
@@ -45,10 +45,10 @@ done.
 $ source ~/.kerl/installations/23.3/activate
 $ kerl active
 The current active installation is:
-/usr/home/codcod/.kerl/installations/23.3
+/usr/home/codcod/.kerl/installations/24.0
 
 $ erl -version
-Erlang (SMP,ASYNC_THREADS,HIPE) (BEAM) emulator version 11.2
+Erlang (SMP,ASYNC_THREADS,HIPE) (BEAM) emulator version 12.0
 
 $ kerl_deactivate          # deactivate "virtual environment"
 ```
@@ -60,13 +60,13 @@ and install one in one go.
 
 ```shell
 $ kiex list releases       # get the list od Elixir releases to choose from
-$ kiex install 1.11.4      # install release "1.11.4"
-$ kiex default 1.11.4      # make this release default
+$ kiex install 1.12.0      # install release "1.12.0"
+$ kiex default 1.12.0      # make this release default
 
 $ iex --version            # check if the installation was successful
-Erlang/OTP 23 [erts-11.1.8] [source] [64-bit] [smp:4:4] [ds:4:4:10] [async-threads:1] [hipe]
+Erlang/OTP 24 [erts-12.0.1] [source] [64-bit] [smp:4:4] [ds:4:4:10] [async-threads:1] [jit]
 
-IEx 1.11.4 (compiled with Erlang/OTP 23)
+IEx 1.12.0 (compiled with Erlang/OTP 24)
 ```
 
 ## After installation
@@ -74,9 +74,9 @@ IEx 1.11.4 (compiled with Erlang/OTP 23)
 Add to your `.zshrc`:
 
 ```shell
-source "$HOME/.kerl/installations/23.3/activate"
+source "$HOME/.kerl/installations/24.0/activate"
 source "$HOME/.kiex/scripts/kiex.bash"
-source "$HOME/.kiex/elixirs/.elixir-1.11.4.env.bash"
+source "$HOME/.kiex/elixirs/elixir-1.12.0.env"
 ```
 
 Follow [this blog post](https://samuelmullen.com/articles/customizing_elixirs_iex)
